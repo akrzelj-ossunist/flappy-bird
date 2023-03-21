@@ -10,16 +10,13 @@ function App() {
   const [pipeLeft, setPipeLeft] = useState(300);
   const [highScore, setHighScore] = useState(0);
   const [modal, setModal] = useState(true);
+  const [movement, setMovement] = useState(false);
   return (
     <div className="container">
       <div
         className="game-container"
         onClick={() => {
-          top > 20 &&
-            !modal &&
-            setTop((prev) => {
-              return prev - 120;
-            });
+          top > 20 && !modal && setMovement(true);
         }}
       >
         {modal && (
@@ -41,7 +38,14 @@ function App() {
           setPipeLeft={setPipeLeft}
           top={top}
         />
-        <Bird top={top} setTop={setTop} modal={modal} setModal={setModal} />
+        <Bird
+          top={top}
+          setTop={setTop}
+          modal={modal}
+          setModal={setModal}
+          movement={movement}
+          setMovement={setMovement}
+        />
       </div>
     </div>
   );
