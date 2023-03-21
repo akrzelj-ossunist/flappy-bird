@@ -10,8 +10,8 @@ function jump(
   setHeight: any
 ) {
   const gravity = setTimeout(() => {
-    if (height > -60 && !modal) {
-      if (height > 0) setTop(top - 2);
+    if (height > 0 && !modal) {
+      setTop(top - 2);
       setHeight(height - 2);
     } else {
       setMovement(false);

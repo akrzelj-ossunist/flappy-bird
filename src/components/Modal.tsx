@@ -10,17 +10,22 @@ const Modal: React.FC<{
   return (
     <div className="modal">
       <div className="content">
-        <p>High score: {highScore}</p>
-        <button
-          onClick={() => {
-            setModal(false);
-            setTop(320);
-            setPipeLeft(300);
-            setHighScore(0);
-          }}
-        >
-          Play
-        </button>
+        <p>Score: {highScore}</p>
+        <div>
+          <p>High score: {localStorage.getItem("highScore")}</p>
+          <button
+            onClick={() => {
+              setModal(false);
+              setTop(320);
+              setPipeLeft(300);
+              setHighScore(0);
+              highScore > Number(localStorage.getItem("highScore")) &&
+                localStorage.setItem("highScore", String(highScore));
+            }}
+          >
+            Play
+          </button>
+        </div>
       </div>
     </div>
   );

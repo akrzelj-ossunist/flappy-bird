@@ -29,6 +29,7 @@ function App() {
           />
         )}
         <img className="background" src={background} />
+        <p className="score">{highScore}</p>
         <Pipes
           modal={modal}
           setModal={setModal}

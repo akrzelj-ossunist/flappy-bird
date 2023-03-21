@@ -3,7 +3,7 @@ import pipe from "../assets/pipe.png";
 import "../styles/pipes.scss";
 
 function checkColision(bottomPipeHeight: any, pipeLeft: any, top: any) {
-  if (pipeLeft <= 80) {
+  if (pipeLeft <= 80 && pipeLeft > -40) {
     if (600 - top > bottomPipeHeight && 600 - top < bottomPipeHeight + 150)
       return true;
     else return false;
