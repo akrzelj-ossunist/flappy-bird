@@ -1,0 +1,14 @@
+@mixin pipe(){
+    width: 75px;
+    position: absolute;
+}
+
+.bottom-pipe{
+    @include pipe;
+    bottom: 0;
+}
+.top-pipe{
+    @include pipe;
+    top: 0;
+    transform: scaleY(-1);
+}

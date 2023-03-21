@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    overflow-y: none;
+    .container{
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background: #F4F4F4;
+        .game-container{
+            position: relative;
+            width: 350px;
+            height: 600px;
+            overflow: hidden;
+            .background{
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+            }
+        }
+    }
+}
