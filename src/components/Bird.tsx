@@ -10,12 +10,12 @@ function jump(
   setHeight: any
 ) {
   const gravity = setTimeout(() => {
-    if (height > 0 && !modal) {
-      setTop(top - 2);
+    if (height > -60 && !modal) {
+      if (height > 0) setTop(top - 2);
       setHeight(height - 2);
     } else {
       setMovement(false);
-      setHeight(100);
+      setHeight(90);
     }
   }, 3);
   return () => clearTimeout(gravity);
@@ -37,7 +37,7 @@ const Bird: React.FC<{
   movement: boolean;
   setMovement: (val: boolean) => void;
 }> = ({ top, setTop, modal, setModal, movement, setMovement }) => {
-  const [height, setHeight] = useState(100);
+  const [height, setHeight] = useState(90);
   useEffect(() => {
     movement
       ? jump(top, modal, setTop, setMovement, height, setHeight)

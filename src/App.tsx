@@ -6,7 +6,7 @@ import Pipes from "./components/Pipes";
 import "./styles/index.scss";
 
 function App() {
-  const [top, setTop] = useState(320);
+  const [top, setTop] = useState(300);
   const [pipeLeft, setPipeLeft] = useState(300);
   const [highScore, setHighScore] = useState(0);
   const [modal, setModal] = useState(true);

@@ -4,7 +4,7 @@ import "../styles/pipes.scss";
 
 function checkColision(bottomPipeHeight: any, pipeLeft: any, top: any) {
   if (pipeLeft <= 80) {
-    if (600 - top > bottomPipeHeight && 600 - top < bottomPipeHeight + 200)
+    if (600 - top > bottomPipeHeight && 600 - top < bottomPipeHeight + 150)
       return true;
     else return false;
   }
@@ -54,7 +54,7 @@ const Pipes: React.FC<{
         className="top-pipe"
         style={{
           left: `${pipeLeft}px`,
-          height: `${600 - bottomPipeHeight - 200}px`,
+          height: `${600 - bottomPipeHeight - 150}px`,
         }}
       />
       <img
