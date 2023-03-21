@@ -9,7 +9,7 @@ const Bird: React.FC<{
 }> = ({ top, setTop, modal, setModal }) => {
   useEffect(() => {
     const gravity = setTimeout(() => {
-      if (top < 560 && !modal) setTop(top + 40 > 560 ? 560 : top + 1.3);
+      if (top < 600 && !modal) setTop(top + 1.3);
       else setModal(true);
     }, 3);
     return () => clearTimeout(gravity);

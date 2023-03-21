@@ -34,7 +34,7 @@ const Pipes: React.FC<{
 
   useEffect(() => {
     const pipeMove = setTimeout(() => {
-      if (top < 560 && !modal && checkColision(bottomPipeHeight, pipeLeft, top))
+      if (!modal && checkColision(bottomPipeHeight, pipeLeft, top))
         setPipeLeft(pipeLeft - 0.75);
       else {
         setModal(true);
