@@ -16,8 +16,6 @@ Prerequisite: Node Package Manager (npm) download can be found <a href="https://
 4. `localhost:3000` to see the app you have to go to this website.
 
 ## Screenshots
-
-Home:
 ![image](./public/mainmenu.png)
 ![image](./public/ingame.png)
 ![image](./public/gameover.png)
